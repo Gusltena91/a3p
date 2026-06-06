@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Reporte Ejecutivo A3P · Buyer Personas + Meta Ads</title>
+<style>
+:root {
+  --bg:#f5f5f7; --card:rgba(255,255,255,.86); --text:#1d1d1f; --muted:#6e6e73; --line:#d8d8df; --black:#000; --blue:#0071e3; --green:#1d9a5b; --orange:#ff9f0a; --red:#e44b4b; --shadow: 0 18px 60px rgba(0,0,0,.08); --radius:28px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at top,#fff 0,#f5f5f7 46%,#ececf1 100%);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Arial,sans-serif;color:var(--text)}
+nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(18px);background:rgba(245,245,247,.78);border-bottom:1px solid rgba(0,0,0,.06)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:14px 22px;display:flex;gap:16px;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:-.03em} .navlinks{display:flex;gap:14px;flex-wrap:wrap} .navlinks a{color:#333;text-decoration:none;font-size:13px;padding:7px 10px;border-radius:99px} .navlinks a:hover{background:#fff}
+.hero{max-width:1180px;margin:0 auto;padding:70px 22px 32px;text-align:center} .eyebrow{display:inline-block;border:1px solid var(--line);background:rgba(255,255,255,.7);padding:8px 14px;border-radius:999px;color:var(--muted);font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(42px,7vw,82px);line-height:.96;margin:0 auto 20px;letter-spacing:-.07em;max-width:1000px} .hero p{font-size:clamp(18px,2.2vw,25px);color:var(--muted);line-height:1.35;max-width:880px;margin:0 auto}
+section{max-width:1180px;margin:0 auto;padding:38px 22px} .section-title{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:18px} h2{font-size:clamp(30px,4vw,52px);letter-spacing:-.055em;margin:0} .subtitle{color:var(--muted);font-size:16px;max-width:620px;line-height:1.45}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px} .kpi{background:var(--card);border:1px solid rgba(255,255,255,.7);box-shadow:var(--shadow);border-radius:var(--radius);padding:24px;text-align:left} .kpi .label{color:var(--muted);font-size:13px} .kpi .value{font-size:34px;font-weight:800;letter-spacing:-.04em;margin-top:8px} .kpi .note{color:var(--muted);font-size:13px;margin-top:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px} .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px} .card{background:var(--card);border:1px solid rgba(255,255,255,.8);box-shadow:var(--shadow);border-radius:var(--radius);padding:24px} .card h3{font-size:23px;letter-spacing:-.035em;margin:0 0 8px} .card p{color:var(--muted);line-height:1.5;margin:8px 0}
+.callout{background:#111;color:#fff;border-radius:34px;padding:34px;box-shadow:var(--shadow)} .callout h3{font-size:34px;letter-spacing:-.05em;margin:0 0 10px} .callout p{color:#d0d0d4;font-size:17px;line-height:1.48}
+.tableWrap{overflow:auto;background:var(--card);border-radius:24px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.8)} table{width:100%;border-collapse:collapse;min-width:760px} th,td{padding:15px 16px;border-bottom:1px solid rgba(0,0,0,.06);text-align:left;vertical-align:top;font-size:14px} th{color:#6e6e73;font-size:12px;text-transform:uppercase;letter-spacing:.05em;background:rgba(255,255,255,.72);position:sticky;top:0} tr:last-child td{border-bottom:none} td b{font-weight:750}
+.barWrap{height:8px;background:#ebebf0;border-radius:999px;margin-top:7px;overflow:hidden} .bar{height:100%;background:#111;border-radius:999px} .bar.accent{background:var(--blue)}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0} .pill{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 13px;font-size:13px;color:#333}
+.personas{display:grid;gap:18px} .persona-card{background:var(--card);border:1px solid rgba(255,255,255,.8);border-radius:32px;padding:26px;box-shadow:var(--shadow)} .persona-head{display:flex;align-items:center;gap:16px;margin-bottom:18px} .rank{display:inline-flex;align-items:center;justify-content:center;background:#111;color:#fff;border-radius:50%;width:52px;height:52px;font-weight:800} .persona-head h3{margin:0;font-size:26px;letter-spacing:-.04em} .persona-head p{margin:4px 0 0;color:var(--muted)} .persona-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px} .persona-grid div{background:rgba(245,245,247,.8);border-radius:20px;padding:16px} .persona-grid p{color:var(--muted);line-height:1.45;margin:8px 0 0} .recommend{margin-top:16px;background:#111;color:#fff;border-radius:20px;padding:16px;line-height:1.45}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 16px} .tabbtn{border:none;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 15px;cursor:pointer;color:#333} .tabbtn.active{background:#111;color:#fff;border-color:#111} .tabPanel{display:none} .tabPanel.active{display:block}
+.insights{display:grid;grid-template-columns:repeat(2,1fr);gap:18px} .insight{background:#fff;border-radius:26px;padding:22px;border:1px solid rgba(0,0,0,.06)} .insight b{font-size:18px} .insight p{color:var(--muted);line-height:1.45}
+footer{max-width:1180px;margin:0 auto;padding:40px 22px 70px;color:var(--muted);font-size:13px}
+@media(max-width:900px){.kpis,.grid2,.grid3,.persona-grid,.insights{grid-template-columns:1fr} .navlinks{display:none} h1{font-size:44px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><div class="logo">A3P · Buyer Intelligence</div><div class="navlinks"><a href="#resumen">Resumen</a><a href="#personas">Buyer personas</a><a href="#meta">Meta Ads</a><a href="#cruce">Cruce</a><a href="#campanas">Campañas</a></div></div></nav>
+<header class="hero">
+  <span class="eyebrow">Mercado Libre + Meta Ads · Mayo 2026</span>
+  <h1>Buyer personas validados por ventas reales y respuesta publicitaria.</h1>
+  <p>Este reporte cruza el volumen de ventas por producto en Mercado Libre con edad, género y ubicación de Meta Ads para priorizar mensajes, audiencias y campañas.</p>
+  <div class="kpis">
+    <div class="kpi"><div class="label">Ventas válidas ML</div><div class="value">1,987</div><div class="note">Base depurada de ventas netas</div></div>
+    <div class="kpi"><div class="label">Producto líder</div><div class="value">1,333</div><div class="note">Ventas de Imperllanta 10 años</div></div>
+    <div class="kpi"><div class="label">Conversaciones Meta</div><div class="value">7,168</div><div class="note">Costo prom. $6</div></div>
+    <div class="kpi"><div class="label">Clics Meta</div><div class="value">43,149</div><div class="note">CTR general 3.5%</div></div>
+  </div>
+</header>
+
+<section id="resumen">
+  <div class="section-title"><div><h2>Resumen ejecutivo</h2><p class="subtitle">La venta real define el buyer persona; Meta Ads valida qué audiencia y mensaje despiertan intención.</p></div></div>
+  <div class="grid2">
+    <div class="callout"><h3>Buyer persona prioritario: dueño de casa que busca solución duradera.</h3><p>La evidencia más fuerte es Imperllanta 10 años: 1,333 ventas, 1,360 unidades y ~$1.90M neto. Meta refuerza el perfil con alta respuesta en rangos 45–65+ y mensajes de garantía, goteras y durabilidad.</p></div>
+    <div class="card"><h3>Lectura estratégica</h3><p>Mercado Libre muestra que el comprador principal es B2C, compra de una unidad y se concentra en CDMX/Edomex. Meta indica que la intención publicitaria se concentra en adultos 45+, especialmente hombres, aunque mujeres tienen mejor tasa mensaje/clic.</p><div class="pills"><span class="pill">Producto ancla: Imperllanta 10 años</span><span class="pill">Segmento fuerte: 45+</span><span class="pill">Zonas: CDMX + EdoMex</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title"><div><h2>Ventas por producto</h2><p class="subtitle">El producto vendido es la señal más directa para construir los buyer personas por volumen.</p></div></div>
+  <div class="tableWrap "><table><thead><tr><th>Producto / familia</th><th>Ventas</th><th>Unidades</th><th>Total neto</th><th>Ticket promedio</th></tr></thead><tbody><tr><td>Imperllanta 10 años</td><td>1,333<div class="barWrap"><div class="bar " style="width:100.0%"></div></div></td><td>1,360</td><td>$1,900,193</td><td>$1,426</td></tr><tr><td>Imperllanta 3 años</td><td>370<div class="barWrap"><div class="bar " style="width:27.8%"></div></div></td><td>370</td><td>$320,697</td><td>$867</td></tr><tr><td>Sellador elastomérico</td><td>179<div class="barWrap"><div class="bar " style="width:13.4%"></div></div></td><td>179</td><td>$147,670</td><td>$825</td></tr><tr><td>Membrana / cuadrimalla</td><td>51<div class="barWrap"><div class="bar " style="width:3.8%"></div></div></td><td>53</td><td>$72,428</td><td>$1,420</td></tr><tr><td>Impertyre</td><td>46<div class="barWrap"><div class="bar " style="width:3.5%"></div></div></td><td>53</td><td>$41,139</td><td>$894</td></tr><tr><td>Impercel</td><td>4<div class="barWrap"><div class="bar " style="width:2.0%"></div></div></td><td>4</td><td>$8,206</td><td>$2,052</td></tr></tbody></table></div>
+</section>
+
+<section id="personas">
+  <div class="section-title"><div><h2>Buyer personas por volumen</h2><p class="subtitle">Cada perfil está justificado por ventas, producto principal, demografía disponible y comportamiento de Meta.</p></div></div>
+  <div class="personas">
+    <article class="persona-card" data-rank="1">
+      <div class="persona-head">
+        <span class="rank">#1</span>
+        <div><h3>Dueño de casa que busca solución duradera</h3><p>Imperllanta 10 años · 1,333 ventas</p></div>
+      </div>
+      <div class="persona-grid">
+        <div><b>Justificación de ventas</b><p>Producto #1: 1,333 ventas, 1,360 unidades, ~$1.90M neto. Predomina compra de 1 unidad y Persona Física.</p></div>
+        <div><b>Validación Meta</b><p>Meta refuerza este perfil: las conversaciones se concentran en 45–65+ y hombres/mujeres adultos; el anuncio ganador habla de “10 años de garantía sin goteras”.</p></div>
+        <div><b>Edad / género</b><p>45–54, 55–64 y 65+ concentran 5,808 conversaciones (81.0% del total Meta). Hombres aportan 4,641 mensajes y mujeres 2,484.</p></div>
+        <div><b>Ubicación</b><p>CDMX y Estado de México concentran el mayor volumen de ventas y también la mayor presión de clics en Meta.</p></div>
+      </div>
+      <div class="recommend"><b>Acción recomendada:</b> Priorizar Imperllanta 10 años con mensajes de durabilidad, garantía, protección patrimonial y prevención de goteras.</div>
+    </article>
+    <article class="persona-card" data-rank="2">
+      <div class="persona-head">
+        <span class="rank">#2</span>
+        <div><h3>Comprador sensible al precio</h3><p>Imperllanta 3 años · 370 ventas</p></div>
+      </div>
+      <div class="persona-grid">
+        <div><b>Justificación de ventas</b><p>Imperllanta 3 años es el segundo producto por volumen, con ticket más accesible que 10 años. Todas las compras registradas son de 1 unidad.</p></div>
+        <div><b>Validación Meta</b><p>Los anuncios de comparativo, Hot Sale y descuento generan intención y ayudan a mover al usuario que compara precio vs beneficio.</p></div>
+        <div><b>Edad / género</b><p>Sigue respondiendo principalmente audiencia adulta 45+, pero este perfil puede trabajarse con copies más directos de ahorro y presupuesto.</p></div>
+        <div><b>Ubicación</b><p>Estado de México y CDMX son las zonas principales, con presencia secundaria en Michoacán, Veracruz y Guanajuato.</p></div>
+      </div>
+      <div class="recommend"><b>Acción recomendada:</b> Activar variante con precio/beneficio: “impermeabiliza sin gastar de más” y remarketing contra quienes interactuaron con comparativos.</div>
+    </article>
+    <article class="persona-card" data-rank="3">
+      <div class="persona-head">
+        <span class="rank">#3</span>
+        <div><h3>Comprador preventivo de temporada de lluvias</h3><p>Imperllanta 10 años + 3 años · 472 ventas marzo / 411 abril</p></div>
+      </div>
+      <div class="persona-grid">
+        <div><b>Justificación de ventas</b><p>Marzo y abril son los meses de mayor volumen, lo que sugiere compra preventiva antes o al inicio de temporada de lluvias.</p></div>
+        <div><b>Validación Meta</b><p>Los anuncios de goteras, urgencia, techo desgastado y expertos conectan directamente con la necesidad preventiva.</p></div>
+        <div><b>Edad / género</b><p>El grueso de respuesta se ubica en 45+, especialmente 55–64 y 65+, segmentos más propensos a cuidar propiedad/casa.</p></div>
+        <div><b>Ubicación</b><p>Cruce fuerte en CDMX, Estado de México, Puebla y Veracruz: zonas con volumen de ventas o alta intención digital.</p></div>
+      </div>
+      <div class="recommend"><b>Acción recomendada:</b> Campaña estacional: “No esperes a la primera gotera”. Priorizar mayo–julio con mensaje de prevención y disponibilidad inmediata.</div>
+    </article>
+    <article class="persona-card" data-rank="4">
+      <div class="persona-head">
+        <span class="rank">#4</span>
+        <div><h3>Aplicador, contratista o mantenimiento</h3><p>Imperllanta + sellador + membrana · 287 ventas Persona Moral</p></div>
+      </div>
+      <div class="persona-grid">
+        <div><b>Justificación de ventas</b><p>Persona Moral representa 287 ventas. Además, sellador y membrana sugieren compras técnicas o para trabajos más completos.</p></div>
+        <div><b>Validación Meta</b><p>La campaña de distribuidores obtuvo resultados de formulario y la región muestra intención en Edomex, CDMX, Puebla, Querétaro y Veracruz.</p></div>
+        <div><b>Edad / género</b><p>La respuesta no debe limitarse por género; la oportunidad está en segmentación por intención: construcción, mantenimiento, impermeabilización y volumen.</p></div>
+        <div><b>Ubicación</b><p>Edomex/CDMX son base, pero regiones como Puebla, Querétaro, Veracruz y Nuevo León aparecen como oportunidad B2B por resultados/clics.</p></div>
+      </div>
+      <div class="recommend"><b>Acción recomendada:</b> Crear campaña B2B separada con WhatsApp/formulario: “cotiza por volumen”, “facturación”, “sistema completo” y “asesoría técnica”.</div>
+    </article>
+    <article class="persona-card" data-rank="5">
+      <div class="persona-head">
+        <span class="rank">#5</span>
+        <div><h3>Comprador técnico de complementos</h3><p>Sellador elastomérico + membrana/cuadrimalla · 179 sellador + 51 membrana</p></div>
+      </div>
+      <div class="persona-grid">
+        <div><b>Justificación de ventas</b><p>El volumen de sellador y membrana muestra compradores que no solo buscan cubeta, sino preparación/refuerzo de aplicación.</p></div>
+        <div><b>Validación Meta</b><p>Los mensajes de expertos, beneficios y diferenciadores ayudan a explicar por qué complementar el sistema.</p></div>
+        <div><b>Edad / género</b><p>El perfil se cruza con adultos 45+ y con usuarios de mayor intención técnica; debe educarse con contenido simple.</p></div>
+        <div><b>Ubicación</b><p>CDMX/Edomex predominan, con señales en Jalisco, Veracruz, Tamaulipas y Guanajuato para sellador.</p></div>
+      </div>
+      <div class="recommend"><b>Acción recomendada:</b> Estrategia de upsell: bundle Imperllanta + sellador + membrana y contenido de “sistema completo”.</div>
+    </article>
+    <article class="persona-card" data-rank="6">
+      <div class="persona-head">
+        <span class="rank">#6</span>
+        <div><h3>Comprador de solución económica o de entrada</h3><p>Impertyre · 46 ventas</p></div>
+      </div>
+      <div class="persona-grid">
+        <div><b>Justificación de ventas</b><p>Impertyre tiene menor volumen, pero funciona como producto de entrada o alternativa puntual.</p></div>
+        <div><b>Validación Meta</b><p>Puede activarse con promociones, comparativos y mensajes de solución práctica.</p></div>
+        <div><b>Edad / género</b><p>No hay demografía exclusiva; se sugiere usarlo como producto complementario o de remarketing, no como campaña principal.</p></div>
+        <div><b>Ubicación</b><p>CDMX, Estado de México y Oaxaca aparecen como zonas con señal para este producto.</p></div>
+      </div>
+      <div class="recommend"><b>Acción recomendada:</b> No priorizar inversión alta; usarlo para remarketing, catálogo y oferta de entrada.</div>
+    </article></div>
+</section>
+
+<section id="meta">
+  <div class="section-title"><div><h2>Validación demográfica de Meta Ads</h2><p class="subtitle">Edad y género sí traen conversaciones iniciadas; por eso son la capa principal de validación publicitaria.</p></div></div>
+  <div class="tabs">
+    <button class="tabbtn active" onclick="openTab(event,'edad')">Edad</button>
+    <button class="tabbtn" onclick="openTab(event,'genero')">Género</button>
+    <button class="tabbtn" onclick="openTab(event,'edadgenero')">Edad + género</button>
+  </div>
+  <div id="edad" class="tabPanel active"><div class="tableWrap "><table><thead><tr><th>Edad</th><th>Conversaciones</th><th>Participación</th><th>CTR</th><th>Costo por mensaje</th></tr></thead><tbody><tr><td>18-24</td><td>1<div class="barWrap"><div class="bar " style="width:2.0%"></div></div></td><td>0.0%</td><td>32.0%</td><td>$60</td></tr><tr><td>25-34</td><td>569<div class="barWrap"><div class="bar " style="width:26.8%"></div></div></td><td>7.9%</td><td>1.8%</td><td>$8</td></tr><tr><td>35-44</td><td>771<div class="barWrap"><div class="bar " style="width:36.4%"></div></div></td><td>10.8%</td><td>2.7%</td><td>$7</td></tr><tr><td>45-54</td><td>1,724<div class="barWrap"><div class="bar " style="width:81.3%"></div></div></td><td>24.1%</td><td>3.6%</td><td>$6</td></tr><tr><td>55-64</td><td>2,120<div class="barWrap"><div class="bar " style="width:100.0%"></div></div></td><td>29.6%</td><td>4.2%</td><td>$6</td></tr><tr><td>65+</td><td>1,964<div class="barWrap"><div class="bar " style="width:92.6%"></div></div></td><td>27.4%</td><td>5.0%</td><td>$7</td></tr><tr><td>Unknown</td><td>19<div class="barWrap"><div class="bar " style="width:2.0%"></div></div></td><td>0.3%</td><td>0.5%</td><td>$6</td></tr></tbody></table></div></div>
+  <div id="genero" class="tabPanel"><div class="tableWrap "><table><thead><tr><th>Género</th><th>Conversaciones</th><th>Participación</th><th>Tasa mensaje/clic</th><th>Costo por mensaje</th></tr></thead><tbody><tr><td>Hombre</td><td>4,641<div class="barWrap"><div class="bar " style="width:100.0%"></div></div></td><td>64.7%</td><td>15.9%</td><td>$6</td></tr><tr><td>Mujer</td><td>2,484<div class="barWrap"><div class="bar " style="width:53.5%"></div></div></td><td>34.7%</td><td>18.3%</td><td>$6</td></tr><tr><td>Desconocido</td><td>43<div class="barWrap"><div class="bar " style="width:2.0%"></div></div></td><td>0.6%</td><td>13.0%</td><td>$8</td></tr></tbody></table></div></div>
+  <div id="edadgenero" class="tabPanel"><div class="tableWrap "><table><thead><tr><th>Segmento</th><th>Conversaciones</th><th>Clics</th><th>CTR</th><th>Costo por mensaje</th></tr></thead><tbody><tr><td>65+ · Hombre</td><td>1,305<div class="barWrap"><div class="bar " style="width:100.0%"></div></div></td><td>9,049</td><td>5.1%</td><td>$7</td></tr><tr><td>55-64 · Hombre</td><td>1,301<div class="barWrap"><div class="bar " style="width:99.7%"></div></div></td><td>7,946</td><td>4.1%</td><td>$6</td></tr><tr><td>45-54 · Hombre</td><td>1,130<div class="barWrap"><div class="bar " style="width:86.6%"></div></div></td><td>6,515</td><td>3.6%</td><td>$6</td></tr><tr><td>55-64 · Mujer</td><td>816<div class="barWrap"><div class="bar " style="width:62.5%"></div></div></td><td>4,263</td><td>4.2%</td><td>$5</td></tr><tr><td>65+ · Mujer</td><td>655<div class="barWrap"><div class="bar " style="width:50.2%"></div></div></td><td>3,701</td><td>4.6%</td><td>$6</td></tr><tr><td>45-54 · Mujer</td><td>588<div class="barWrap"><div class="bar " style="width:45.1%"></div></div></td><td>3,083</td><td>3.7%</td><td>$5</td></tr><tr><td>35-44 · Hombre</td><td>548<div class="barWrap"><div class="bar " style="width:42.0%"></div></div></td><td>3,498</td><td>2.8%</td><td>$7</td></tr><tr><td>25-34 · Hombre</td><td>356<div class="barWrap"><div class="bar " style="width:27.3%"></div></div></td><td>2,171</td><td>1.9%</td><td>$8</td></tr></tbody></table></div></div>
+  <div class="grid3" style="margin-top:18px">
+    <div class="card"><h3>Segmento con más volumen</h3><p><b>Hombres 65+</b> generan 1,305 conversaciones. Muy cercano al perfil de dueño de casa/propietario que busca evitar goteras.</p></div>
+    <div class="card"><h3>Segmento eficiente</h3><p><b>Mujeres 55–64</b> tienen 816 conversaciones y una tasa mensaje/clic superior a hombres, útil para mensajes de hogar, prevención y protección familiar.</p></div>
+    <div class="card"><h3>Rango prioritario</h3><p><b>45–65+</b> concentra 5,808 conversaciones, equivalente a 81.0% del total. La pauta debe priorizar adultos propietarios o responsables de mantenimiento del hogar.</p></div>
+  </div>
+</section>
+
+<section id="cruce">
+  <div class="section-title"><div><h2>Cruce ubicación: ventas ML vs intención Meta</h2><p class="subtitle">Región en Meta no trae conversaciones por WhatsApp; por eso se cruza contra clics como señal de intención, y ventas ML como señal de compra real.</p></div></div>
+  <div class="tableWrap "><table><thead><tr><th>Estado</th><th>Ventas ML</th><th>Clics Meta</th><th>Total neto ML</th><th>CTR Meta</th><th>Índice intención/venta</th></tr></thead><tbody><tr><td>Estado De México</td><td>499<div class="barWrap"><div class="bar " style="width:100.0%"></div></div></td><td>11,742<div class="barWrap"><div class="bar accent" style="width:57.9%"></div></div></td><td>$621,629</td><td>3.5%</td><td>1.03x</td></tr><tr><td>Distrito Federal</td><td>461<div class="barWrap"><div class="bar " style="width:92.4%"></div></div></td><td>20,279<div class="barWrap"><div class="bar accent" style="width:100.0%"></div></div></td><td>$623,888</td><td>3.4%</td><td>1.93x</td></tr><tr><td>Veracruz</td><td>113<div class="barWrap"><div class="bar " style="width:22.6%"></div></div></td><td>419<div class="barWrap"><div class="bar accent" style="width:2.1%"></div></div></td><td>$138,681</td><td>5.5%</td><td>0.16x</td></tr><tr><td>Morelos</td><td>92<div class="barWrap"><div class="bar " style="width:18.4%"></div></div></td><td>522<div class="barWrap"><div class="bar accent" style="width:2.6%"></div></div></td><td>$115,235</td><td>3.9%</td><td>0.25x</td></tr><tr><td>Guanajuato</td><td>74<div class="barWrap"><div class="bar " style="width:14.8%"></div></div></td><td>755<div class="barWrap"><div class="bar accent" style="width:3.7%"></div></div></td><td>$83,722</td><td>4.9%</td><td>0.45x</td></tr><tr><td>Michoacán</td><td>72<div class="barWrap"><div class="bar " style="width:14.4%"></div></div></td><td>350<div class="barWrap"><div class="bar accent" style="width:2.0%"></div></div></td><td>$83,947</td><td>4.6%</td><td>0.21x</td></tr><tr><td>Querétaro</td><td>71<div class="barWrap"><div class="bar " style="width:14.2%"></div></div></td><td>1,194<div class="barWrap"><div class="bar accent" style="width:5.9%"></div></div></td><td>$90,264</td><td>3.0%</td><td>0.74x</td></tr><tr><td>Puebla</td><td>70<div class="barWrap"><div class="bar " style="width:14.0%"></div></div></td><td>2,631<div class="barWrap"><div class="bar accent" style="width:13.0%"></div></div></td><td>$85,902</td><td>3.1%</td><td>1.65x</td></tr><tr><td>Jalisco</td><td>67<div class="barWrap"><div class="bar " style="width:13.4%"></div></div></td><td>1,352<div class="barWrap"><div class="bar accent" style="width:6.7%"></div></div></td><td>$80,422</td><td>3.6%</td><td>0.89x</td></tr><tr><td>Oaxaca</td><td>62<div class="barWrap"><div class="bar " style="width:12.4%"></div></div></td><td>248<div class="barWrap"><div class="bar accent" style="width:2.0%"></div></div></td><td>$71,483</td><td>5.2%</td><td>0.18x</td></tr></tbody></table></div>
+</section>
+
+<section>
+  <div class="section-title"><div><h2>Mensajes y anuncios que validan intención</h2><p class="subtitle">Meta ayuda a detectar qué ángulo creativo mueve más conversaciones.</p></div></div>
+  <div class="grid2">
+    <div><div class="tableWrap "><table><thead><tr><th>Señal creativa</th><th>Conversaciones</th><th>Clics</th><th>CTR</th><th>Costo msg</th></tr></thead><tbody><tr><td>Imperllanta 10 años / Durabilidad</td><td>3,254<div class="barWrap"><div class="bar " style="width:100.0%"></div></div></td><td>17,956</td><td>3.1%</td><td>$6</td></tr><tr><td>Beneficios / diferenciador</td><td>1,282<div class="barWrap"><div class="bar " style="width:39.4%"></div></div></td><td>6,397</td><td>3.6%</td><td>$6</td></tr><tr><td>Prueba social / confianza</td><td>1,044<div class="barWrap"><div class="bar " style="width:32.1%"></div></div></td><td>6,391</td><td>5.9%</td><td>$4</td></tr><tr><td>Asesoría / aplicación profesional</td><td>1,025<div class="barWrap"><div class="bar " style="width:31.5%"></div></div></td><td>6,018</td><td>3.9%</td><td>$7</td></tr><tr><td>Precio / promoción / comparación</td><td>272<div class="barWrap"><div class="bar " style="width:8.4%"></div></div></td><td>1,832</td><td>2.1%</td><td>$9</td></tr><tr><td>Urgencia / temporada de lluvias</td><td>186<div class="barWrap"><div class="bar " style="width:5.7%"></div></div></td><td>709</td><td>5.1%</td><td>$3</td></tr><tr><td>Sellador / complemento técnico</td><td>53<div class="barWrap"><div class="bar " style="width:2.0%"></div></div></td><td>366</td><td>3.9%</td><td>$8</td></tr><tr><td>Otros</td><td>52<div class="barWrap"><div class="bar " style="width:2.0%"></div></div></td><td>3,480</td><td>4.0%</td><td>$68</td></tr></tbody></table></div></div>
+    <div><div class="tableWrap "><table><thead><tr><th>Anuncio ganador</th><th>Conversaciones</th><th>Clics</th><th>CTR</th><th>Costo msg</th></tr></thead><tbody><tr><td>VID I 10 AÑOS DE GARANTIA SIN GOTERAS I ARTHUR 2026</td><td>2,122<div class="barWrap"><div class="bar " style="width:100.0%"></div></div></td><td>9,018</td><td>3.6%</td><td>$5</td></tr><tr><td>VID I  DIFERENCIADOR Y BENEFICIOS I MAYO</td><td>1,172<div class="barWrap"><div class="bar " style="width:55.2%"></div></div></td><td>5,676</td><td>3.5%</td><td>$5</td></tr><tr><td>IMG I COMPARATIVO I 10 AÑOS-MAYO</td><td>1,118<div class="barWrap"><div class="bar " style="width:52.7%"></div></div></td><td>5,146</td><td>1.7%</td><td>$6</td></tr><tr><td>VID I TESTIMONIALES I FEB 2026</td><td>1,043<div class="barWrap"><div class="bar " style="width:49.2%"></div></div></td><td>6,390</td><td>5.9%</td><td>$4</td></tr><tr><td>VIDEO - IMPERMIABILIZA CON EXPERTOS I MARZO</td><td>652<div class="barWrap"><div class="bar " style="width:30.7%"></div></div></td><td>1,938</td><td>2.3%</td><td>$5</td></tr><tr><td>Marzo - Impermeabiliza con expertos</td><td>372<div class="barWrap"><div class="bar " style="width:17.5%"></div></div></td><td>3,994</td><td>5.7%</td><td>$10</td></tr><tr><td>VID I URGENCIA Y TEMPORALIDAD I ABRIL</td><td>147<div class="barWrap"><div class="bar " style="width:6.9%"></div></div></td><td>417</td><td>4.7%</td><td>$3</td></tr><tr><td>Mayo - Hot Sale</td><td>114<div class="barWrap"><div class="bar " style="width:5.4%"></div></div></td><td>994</td><td>5.6%</td><td>$12</td></tr></tbody></table></div></div>
+  </div>
+</section>
+
+<section id="campanas">
+  <div class="section-title"><div><h2>Campañas recomendadas</h2><p class="subtitle">Priorizadas por volumen real de venta y validación demográfica de Meta.</p></div></div>
+  <div class="insights">
+    <div class="insight"><b>1. Imperllanta 10 años · Dueño de casa 45+</b><p><b>Audiencia:</b> 45–65+, CDMX/Edomex. <b>Mensaje:</b> 10 años de protección, sin goteras, inversión inteligente. <b>CTA:</b> Compra en Mercado Libre.</p></div>
+    <div class="insight"><b>2. Temporada de lluvias · Preventivo</b><p><b>Audiencia:</b> adultos 45+, zonas con venta e intención. <b>Mensaje:</b> No esperes a la primera gotera. <b>Formato:</b> problema-solución con techo húmedo/filtración.</p></div>
+    <div class="insight"><b>3. Imperllanta 3 años · Precio/beneficio</b><p><b>Audiencia:</b> remarketing de clics y comparativos. <b>Mensaje:</b> impermeabiliza sin gastar de más. <b>CTA:</b> Elige la opción ideal para tu presupuesto.</p></div>
+    <div class="insight"><b>4. Sistema completo · Complementos</b><p><b>Audiencia:</b> interesados en aplicación, expertos y mantenimiento. <b>Mensaje:</b> sellador + membrana + Imperllanta para mayor resistencia. <b>CTA:</b> Completa tu impermeabilización.</p></div>
+    <div class="insight"><b>5. B2B / distribuidores</b><p><b>Audiencia:</b> contratistas, aplicadores, mantenimiento, construcción. <b>Mensaje:</b> cotiza por volumen, facturación, asesoría técnica. <b>Canal:</b> WhatsApp/formulario.</p></div>
+    <div class="insight"><b>6. Región con oportunidad</b><p><b>Puebla</b> aparece con alta intención en Meta frente a su volumen de venta ML. Recomendación: test de campaña geográfica con creativos de lluvia y garantía.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title"><div><h2>Conclusión ejecutiva</h2></div></div>
+  <div class="callout"><h3>La estrategia debe anclarse en Imperllanta 10 años y en adultos 45+ de CDMX/Edomex.</h3><p>El cruce confirma que el buyer persona principal es un comprador doméstico que busca protección duradera. Meta no reemplaza el análisis de ventas: lo afina. La mayor oportunidad inmediata está en escalar mensajes de garantía, goteras y prevención de lluvias, con variantes por precio para Imperllanta 3 años y upsell técnico para sellador/membrana.</p></div>
+</section>
+
+<footer>
+  Fuentes integradas: histórico de ventas Mercado Libre/Mercado Shops, reporte Meta Ads por campaña/anuncio, reporte Meta por edad/género y reporte Meta por región. Nota: edad, género e ubicación provienen de Meta Ads; Mercado Libre no incluye edad ni género.
+</footer>
+<script>
+function openTab(evt,id){
+ document.querySelectorAll('.tabPanel').forEach(p=>p.classList.remove('active'));
+ document.querySelectorAll('.tabbtn').forEach(b=>b.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ evt.currentTarget.classList.add('active');
+}
+</script>
+</body></html>
